@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ivaylo Gyurov | CV Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div class="progress" id="progress"></div>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='images/20250519_174227.jpg') }}" alt="Ivaylo Gyurov" />
+        </div>
+        <div class="nav-links">
+          <a href="{{ url_for('home') }}">Home</a>
+          <a href="{{ url_for('about') }}">About</a>
+          <a href="{{ url_for('education') }}">Education</a>
+          <a href="{{ url_for('experience') }}">Experience</a>
+          <a href="{{ url_for('skills') }}">Skills</a>
+          <a href="{{ url_for('certificates') }}">Certificates</a>
+          <a href="{{ url_for('projects') }}">Projects</a>
+          <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle focus mode">
+          Focus Mode
+        </button>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-card">
+          <div class="avatar">
+            <img src="{{ url_for('static', filename='images/20250519_174227.jpg') }}" alt="Ivaylo Gyurov" />
+          </div>
+          <div>
+            <h1>Ivaylo Gyurov</h1>
+            <p class="subtitle">Student of Computer Science at PGKPI, Burgas</p>
+            <p class="tagline">
+              Exploring machine learning and AI with a focus on practical, people-first
+              applications.
+            </p>
+            <div class="cta-row">
+              <a class="btn" href="{{ url_for('contact') }}">Contact Me</a>
+              <button class="btn secondary" id="downloadBtn">Download CV</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-title">Quick Facts</div>
+          <div class="facts">
+            <div class="fact">
+              <span class="fact-label">Location</span>
+              <span class="fact-value">Burgas, Bulgaria</span>
+            </div>
+            <div class="fact">
+              <span class="fact-label">Email</span>
+              <span class="fact-value">IRGurov22@codingburgas.bg</span>
+            </div>
+            <div class="fact">
+              <span class="fact-label">Phone</span>
+              <span class="fact-value">+359 877 433 615</span>
+            </div>
+            <div class="fact">
+              <span class="fact-label">Focus</span>
+              <span class="fact-value">Machine Learning, AI</span>
+            </div>
+          </div>
+          <div class="chips">
+            <span class="chip">Fast learner</span>
+            <span class="chip">Focused</span>
+            <span class="chip">Customer-first</span>
+            <span class="chip">Ambitious</span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Welcome</h2>
+          <p>A quick overview of who I am and where to explore deeper.</p>
+        </div>
+        <div class="section-body">
+          <p>
+            I am Ivaylo Gyurov, a Computer Science student at PGKPI in Burgas. My focus is
+            on machine learning and AI, and I enjoy building solutions that mix technical
+            rigor with clear communication.
+          </p>
+          <div class="highlight">
+            <span>Goal</span>
+            <strong>Build a strong foundation and grow through focused, independent work.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Explore the CV</h2>
+          <p>Each area has its own page with more detail and context.</p>
+        </div>
+        <div class="page-grid">
+          <a class="page-card" href="{{ url_for('about') }}">
+            <h3>About</h3>
+            <p>Personal story, motivation, and focus areas.</p>
+          </a>
+          <a class="page-card" href="{{ url_for('education') }}">
+            <h3>Education</h3>
+            <p>Academic timeline, key subjects, and growth path.</p>
+          </a>
+          <a class="page-card" href="{{ url_for('experience') }}">
+            <h3>Experience</h3>
+            <p>Real-world work, responsibilities, and impact.</p>
+          </a>
+          <a class="page-card" href="{{ url_for('skills') }}">
+            <h3>Skills</h3>
+            <p>Strengths, learning focus, and soft skills.</p>
+          </a>
+          <a class="page-card" href="{{ url_for('certificates') }}">
+            <h3>Certificates</h3>
+            <p>Verified achievements and professional training.</p>
+          </a>
+          <a class="page-card" href="{{ url_for('projects') }}">
+            <h3>Projects</h3>
+            <p>Current builds and future portfolio highlights.</p>
+          </a>
+          <a class="page-card" href="{{ url_for('contact') }}">
+            <h3>Contact</h3>
+            <p>Ways to reach me and send a message.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Highlights</h2>
+          <p>Snapshots that describe my direction right now.</p>
+        </div>
+        <div class="info-cards">
+          <div class="info-card">
+            <span class="badge">Learning</span>
+            <h3>AI Fundamentals</h3>
+            <p>Building a base in machine learning, data thinking, and practical tools.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Strength</span>
+            <h3>Communication</h3>
+            <p>Clear, confident communication in real-world settings.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Next</span>
+            <h3>Competition Ready</h3>
+            <p>Focused on presenting my best work and learning path.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Built with focus and curiosity.</span>
+    </footer>
+
+    <button class="back-top" id="backTop" aria-label="Back to top">Top</button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

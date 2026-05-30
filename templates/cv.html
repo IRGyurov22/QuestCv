@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ivaylo Gyurov | Creative CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cv.css') }}" />
+  </head>
+  <body>
+    <div class="cv-shell">
+      <header class="cv-header">
+        <div class="title-block">
+          <h1>IVAYLO<br />GYUROV</h1>
+          <div class="title-tag">Creative CV | Student of Computer Science</div>
+        </div>
+        <button class="cv-btn" id="downloadPdf">Save as PDF</button>
+      </header>
+
+      <section class="cv-grid">
+        <aside class="cv-sidebar">
+          <div class="contact-block">
+            <h2>Contact</h2>
+            <ul>
+              <li><span>Phone</span> +359 877 433 615</li>
+              <li><span>Email</span> IRGurov22@codingburgas.bg</li>
+              <li><span>Location</span> Burgas, Bulgaria</li>
+            </ul>
+          </div>
+
+          <div class="profile-block">
+            <h2>Profile</h2>
+            <p>
+              I am a Computer Science student at PGKPI with a strong interest in AI and
+              machine learning. I focus on clear communication, steady improvement, and
+              practical execution.
+            </p>
+          </div>
+
+          <div class="education-block">
+            <h2>Education</h2>
+            <div class="item">
+              <strong>PGKPI</strong>
+              <span>2022 - 2027</span>
+              <p>Computer Science program with ML and AI focus.</p>
+            </div>
+            <div class="item">
+              <strong>OU Petko Rachev Slaveikov</strong>
+              <span>2015 - 2022</span>
+              <p>Primary education with a strong base in math and technology.</p>
+            </div>
+          </div>
+
+          <div class="languages-block">
+            <h2>Languages</h2>
+            <div class="pill">English</div>
+            <div class="pill">German</div>
+          </div>
+        </aside>
+
+        <main class="cv-main">
+          <div class="photo-card">
+            <img class="photo" src="{{ url_for('static', filename='images/20250519_174227.jpg') }}" alt="Ivaylo Gyurov" />
+            <div class="photo-caption">
+              Creative CV style inspired by modern competition layouts.
+            </div>
+          </div>
+
+          <section class="section">
+            <h2>Experience</h2>
+            <div class="item">
+              <div class="item-header">
+                <strong>Ice Cream Service Staff</strong>
+                <span>June - August 2025</span>
+              </div>
+              <ul>
+                <li>Handled fast queues and ensured every order was correct.</li>
+                <li>Built communication skills by speaking with many customers daily.</li>
+                <li>Stayed calm, polite, and efficient under pressure.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Core Skills</h2>
+            <div class="skill-grid">
+              <span>Fast learner</span>
+              <span>Hard working</span>
+              <span>Kind and respectful</span>
+              <span>Customer communication</span>
+              <span>Self-management</span>
+              <span>Attention to detail</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Certificates</h2>
+            <div class="two-col">
+              <ul>
+                <li>Cambridge B2 English Certificate</li>
+                <li>Goethe-Institut A1 German Certificate</li>
+                <li>JavaScript Certificate</li>
+              </ul>
+              <ul>
+                <li>Microsoft Office Specialist: Word Associate (2019)</li>
+                <li>Microsoft Office Specialist: Excel Associate (2019)</li>
+                <li>Cisco IT Essentials: PC Hardware and Software</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Creative Focus</h2>
+            <p>
+              I am building a portfolio that connects AI knowledge with real-world
+              communication, creating simple experiences that feel confident and clear.
+            </p>
+          </section>
+        </main>
+      </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

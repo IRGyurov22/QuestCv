@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Ivaylo Gyurov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div class="progress" id="progress"></div>
+
+    <header class="page-hero">
+      <nav class="nav">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='images/20250519_174227.jpg') }}" alt="Ivaylo Gyurov" />
+        </div>
+        <div class="nav-links">
+          <a href="{{ url_for('home') }}">Home</a>
+          <a href="{{ url_for('about') }}">About</a>
+          <a href="{{ url_for('education') }}">Education</a>
+          <a href="{{ url_for('experience') }}">Experience</a>
+          <a href="{{ url_for('skills') }}">Skills</a>
+          <a href="{{ url_for('certificates') }}">Certificates</a>
+          <a href="{{ url_for('projects') }}">Projects</a>
+          <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle focus mode">
+          Focus Mode
+        </button>
+      </nav>
+
+      <section class="page-intro">
+        <div>
+          <h1>Contact</h1>
+          <p class="subtitle">Open to questions, feedback, and competition opportunities.</p>
+        </div>
+        <div class="intro-actions">
+          <button class="btn secondary" id="downloadBtn">Download CV</button>
+          <a class="btn" href="{{ url_for('projects') }}">See Projects</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Get in Touch</h2>
+          <p>Choose the way that is easiest for you.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Contact Details</h3>
+            <p>Email: <a href="mailto:IRGurov22@codingburgas.bg">IRGurov22@codingburgas.bg</a></p>
+            <p>Phone: <a href="tel:+359877433615">+359 877 433 615</a></p>
+            <p>Location: Burgas, Bulgaria</p>
+            <div class="tag-list">
+              <span class="tag">Competitions</span>
+              <span class="tag">Feedback</span>
+              <span class="tag">Questions</span>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-actions">
+              <a class="btn tiny" href="mailto:IRGurov22@codingburgas.bg">Email Me</a>
+              <a class="btn tiny" href="tel:+359877433615">Call Me</a>
+            </div>
+            <ul class="contact-points">
+              <li>Preferred contact: email</li>
+              <li>Response time: 1-2 days</li>
+              <li>Open to short competition feedback</li>
+            </ul>
+          </div>
+          <form class="contact-form" id="contactForm" action="{{ url_for('contact') }}" method="post" data-backend="true">
+            <label>
+              Your name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Your email
+              <input type="email" name="email" placeholder="you@email.com" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Tell me about your idea" required></textarea>
+            </label>
+            <button class="btn" type="submit">Send Message</button>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <p class="form-success">{{ messages[0] }}</p>
+              {% endif %}
+            {% endwith %}
+            <p class="form-note" id="formNote">Messages are saved on the server.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Availability</h2>
+          <p>How I prefer to handle new opportunities.</p>
+        </div>
+        <div class="card">
+          <ul class="list">
+            <li>Open to competition entries and learning challenges.</li>
+            <li>Prefers clear goals, independent tasks, and quick feedback.</li>
+            <li>Ready to present work and explain decisions clearly.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Built with focus and curiosity.</span>
+    </footer>
+
+    <button class="back-top" id="backTop" aria-label="Back to top">Top</button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

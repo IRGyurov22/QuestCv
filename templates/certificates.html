@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Certificates | Ivaylo Gyurov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div class="progress" id="progress"></div>
+
+    <header class="page-hero">
+      <nav class="nav">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='images/20250519_174227.jpg') }}" alt="Ivaylo Gyurov" />
+        </div>
+        <div class="nav-links">
+          <a href="{{ url_for('home') }}">Home</a>
+          <a href="{{ url_for('about') }}">About</a>
+          <a href="{{ url_for('education') }}">Education</a>
+          <a href="{{ url_for('experience') }}">Experience</a>
+          <a href="{{ url_for('skills') }}">Skills</a>
+          <a href="{{ url_for('certificates') }}">Certificates</a>
+          <a href="{{ url_for('projects') }}">Projects</a>
+          <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle focus mode">
+          Focus Mode
+        </button>
+      </nav>
+
+      <section class="page-intro">
+        <div>
+          <h1>Certificates</h1>
+          <p class="subtitle">Training and credentials that support my learning path.</p>
+        </div>
+        <div class="intro-actions">
+          <button class="btn secondary" id="downloadBtn">Download CV</button>
+          <a class="btn" href="{{ url_for('contact') }}">Ask for Details</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Verified Achievements</h2>
+          <p>A mix of language, software, and networking credentials.</p>
+        </div>
+        <div class="cert-summary">
+          <div class="cert-stat">
+            <span class="cert-number">7</span>
+            <span class="cert-label">Certificates Earned</span>
+          </div>
+          <div class="cert-stat">
+            <span class="cert-number">3</span>
+            <span class="cert-label">Focus Areas</span>
+          </div>
+          <div class="cert-stat">
+            <span class="cert-number">1</span>
+            <span class="cert-label">Goal: Strong Technical Base</span>
+          </div>
+        </div>
+
+        <div class="cert-grid">
+          <article class="cert-card">
+            <div class="cert-meta">Language</div>
+            <h3>Cambridge B2 English Certificate</h3>
+            <p>Confident communication in academic and technical contexts.</p>
+            <div class="cert-tags">
+              <span class="cert-tag">English</span>
+              <span class="cert-tag">Communication</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-meta">Language</div>
+            <h3>Goethe-Institut A1 German Certificate</h3>
+            <p>Foundation in German language basics and everyday conversation.</p>
+            <div class="cert-tags">
+              <span class="cert-tag">German</span>
+              <span class="cert-tag">Foundation</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-meta">Productivity</div>
+            <h3>Microsoft Office Specialist: Word Associate (2019)</h3>
+            <p>Document formatting, structure, and professional templates.</p>
+            <div class="cert-tags">
+              <span class="cert-tag">Word</span>
+              <span class="cert-tag">Formatting</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-meta">Productivity</div>
+            <h3>Microsoft Office Specialist: Excel Associate (2019)</h3>
+            <p>Spreadsheets, formulas, and structured data handling.</p>
+            <div class="cert-tags">
+              <span class="cert-tag">Excel</span>
+              <span class="cert-tag">Data Basics</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-meta">Programming</div>
+            <h3>JavaScript Certificate</h3>
+            <p>Core language knowledge for interactive web experiences.</p>
+            <div class="cert-tags">
+              <span class="cert-tag">JavaScript</span>
+              <span class="cert-tag">Web</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-meta">Networking</div>
+            <h3>Cisco Network Defense</h3>
+            <p>Network security foundations and safe system thinking.</p>
+            <div class="cert-tags">
+              <span class="cert-tag">Security</span>
+              <span class="cert-tag">Networking</span>
+            </div>
+          </article>
+          <article class="cert-card">
+            <div class="cert-meta">Hardware</div>
+            <h3>Cisco IT Essentials: PC Hardware and Software</h3>
+            <p>Understanding core hardware components and troubleshooting.</p>
+            <div class="cert-tags">
+              <span class="cert-tag">Hardware</span>
+              <span class="cert-tag">Support</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Focus Areas</h2>
+          <p>How the certificates support my creative and technical profile.</p>
+        </div>
+        <div class="info-cards">
+          <div class="info-card">
+            <span class="badge">Language</span>
+            <h3>Clear Communication</h3>
+            <p>English and German credentials support confident presentation.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Tools</span>
+            <h3>Practical Execution</h3>
+            <p>Office certifications show readiness for structured work.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Tech</span>
+            <h3>Technical Foundations</h3>
+            <p>Cisco and JavaScript training builds a solid base for AI study.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Why It Matters</h2>
+          <p>How these certificates support my goals.</p>
+        </div>
+        <div class="card">
+          <p>
+            These certificates show consistent effort across multiple disciplines. They
+            strengthen my communication abilities, support practical tech skills, and show
+            a steady commitment to professional learning.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Built with focus and curiosity.</span>
+    </footer>
+
+    <button class="back-top" id="backTop" aria-label="Back to top">Top</button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

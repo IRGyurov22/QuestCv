@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experience | Ivaylo Gyurov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div class="progress" id="progress"></div>
+
+    <header class="page-hero">
+      <nav class="nav">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='images/20250519_174227.jpg') }}" alt="Ivaylo Gyurov" />
+        </div>
+        <div class="nav-links">
+          <a href="{{ url_for('home') }}">Home</a>
+          <a href="{{ url_for('about') }}">About</a>
+          <a href="{{ url_for('education') }}">Education</a>
+          <a href="{{ url_for('experience') }}">Experience</a>
+          <a href="{{ url_for('skills') }}">Skills</a>
+          <a href="{{ url_for('certificates') }}">Certificates</a>
+          <a href="{{ url_for('projects') }}">Projects</a>
+          <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle focus mode">
+          Focus Mode
+        </button>
+      </nav>
+
+      <section class="page-intro">
+        <div>
+          <h1>Experience</h1>
+          <p class="subtitle">Fast-paced work that strengthened my communication.</p>
+        </div>
+        <div class="intro-actions">
+          <button class="btn secondary" id="downloadBtn">Download CV</button>
+          <a class="btn" href="{{ url_for('contact') }}">Get in Touch</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Ice Cream Service Staff</h2>
+          <p>June - August 2025 | Seasonal</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>Customer Service and Sales</h3>
+              <span class="muted">Burgas, Bulgaria</span>
+            </div>
+            <span class="pill">Hospitality</span>
+          </div>
+          <ul class="list">
+            <li>Handled fast queues and ensured every order was correct.</li>
+            <li>Improved communication skills by speaking with many customers daily.</li>
+            <li>Learned to stay calm, polite, and efficient under pressure.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Impact Highlights</h2>
+          <p>How the role strengthened my professional habits.</p>
+        </div>
+        <div class="info-cards">
+          <div class="info-card">
+            <span class="badge">Service</span>
+            <h3>Customer-first mindset</h3>
+            <p>Focused on making each interaction friendly and smooth.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Speed</span>
+            <h3>Fast execution</h3>
+            <p>Balanced speed with quality and attention to detail.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Focus</span>
+            <h3>Reliable execution</h3>
+            <p>Stayed consistent and accurate during busy hours.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Transferable Skills</h2>
+          <p>Skills I now bring into tech and AI environments.</p>
+        </div>
+        <div class="card">
+          <div class="tag-list">
+            <span class="tag">Customer communication</span>
+            <span class="tag">Stress management</span>
+            <span class="tag">Attention to detail</span>
+            <span class="tag">Personal responsibility</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Built with focus and curiosity.</span>
+    </footer>
+
+    <button class="back-top" id="backTop" aria-label="Back to top">Top</button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | Ivaylo Gyurov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div class="progress" id="progress"></div>
+
+    <header class="page-hero">
+      <nav class="nav">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='images/20250519_174227.jpg') }}" alt="Ivaylo Gyurov" />
+        </div>
+        <div class="nav-links">
+          <a href="{{ url_for('home') }}">Home</a>
+          <a href="{{ url_for('about') }}">About</a>
+          <a href="{{ url_for('education') }}">Education</a>
+          <a href="{{ url_for('experience') }}">Experience</a>
+          <a href="{{ url_for('skills') }}">Skills</a>
+          <a href="{{ url_for('certificates') }}">Certificates</a>
+          <a href="{{ url_for('projects') }}">Projects</a>
+          <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle focus mode">
+          Focus Mode
+        </button>
+      </nav>
+
+      <section class="page-intro">
+        <div>
+          <h1>About Ivaylo</h1>
+          <p class="subtitle">
+            Curious, focused, and motivated to grow in machine learning and AI.
+          </p>
+        </div>
+        <div class="intro-actions">
+          <button class="btn secondary" id="downloadBtn">Download CV</button>
+          <a class="btn" href="{{ url_for('contact') }}">Start a Conversation</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Story</h2>
+          <p>Where I am today and what drives me.</p>
+        </div>
+        <div class="section-body">
+          <p>
+            I am a student at PGKPI in Burgas with a deep interest in how technology can
+            support people and improve everyday experiences. I enjoy learning fast and
+            building a clear path toward a future in AI.
+          </p>
+          <div class="highlight">
+            <span>Current Focus</span>
+            <strong>AI fundamentals, strong communication, and practical execution.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>What I Value</h2>
+          <p>Principles that shape how I work and learn.</p>
+        </div>
+        <div class="info-cards">
+          <div class="info-card">
+            <span class="badge">People</span>
+            <h3>Respect and clarity</h3>
+            <p>I keep communication clear, calm, and focused.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Progress</span>
+            <h3>Daily improvement</h3>
+            <p>I track learning goals and build habits that make them real.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Craft</span>
+            <h3>Clear execution</h3>
+            <p>Simple, direct solutions are better than complex and fragile ones.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Personal Highlights</h2>
+          <p>Small details that show how I approach work.</p>
+        </div>
+        <div class="split">
+          <div class="card">
+            <h3>Strengths</h3>
+            <ul class="list">
+              <li>Fast learner who stays consistent under pressure.</li>
+              <li>Calm communicator with real customer experience.</li>
+              <li>Enjoys focused study and sharing results when asked.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Interests</h3>
+            <div class="tag-list">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">AI Ethics</span>
+              <span class="tag">Data Thinking</span>
+              <span class="tag">Human-centered Design</span>
+            </div>
+            <p class="muted">I want to build AI products that are useful and honest.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Built with focus and curiosity.</span>
+    </footer>
+
+    <button class="back-top" id="backTop" aria-label="Back to top">Top</button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

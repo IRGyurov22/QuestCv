@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skills | Ivaylo Gyurov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div class="progress" id="progress"></div>
+
+    <header class="page-hero">
+      <nav class="nav">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='images/20250519_174227.jpg') }}" alt="Ivaylo Gyurov" />
+        </div>
+        <div class="nav-links">
+          <a href="{{ url_for('home') }}">Home</a>
+          <a href="{{ url_for('about') }}">About</a>
+          <a href="{{ url_for('education') }}">Education</a>
+          <a href="{{ url_for('experience') }}">Experience</a>
+          <a href="{{ url_for('skills') }}">Skills</a>
+          <a href="{{ url_for('certificates') }}">Certificates</a>
+          <a href="{{ url_for('projects') }}">Projects</a>
+          <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle focus mode">
+          Focus Mode
+        </button>
+      </nav>
+
+      <section class="page-intro">
+        <div>
+          <h1>Skills</h1>
+          <p class="subtitle">Soft skills, core strengths, and emerging abilities.</p>
+        </div>
+        <div class="intro-actions">
+          <button class="btn secondary" id="downloadBtn">Download CV</button>
+          <a class="btn" href="{{ url_for('projects') }}">See Projects</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Core Skills</h2>
+          <p>Tap a skill to highlight it. Filter to explore categories.</p>
+        </div>
+        <div class="skills-grid" id="skillsGrid">
+          <button class="skill" data-level="core">Fast learner</button>
+          <button class="skill" data-level="core">Hard working</button>
+          <button class="skill" data-level="core">Kind and respectful</button>
+          <button class="skill" data-level="core">Customer communication</button>
+          <button class="skill" data-level="emerging">Industry experience (entry)</button>
+          <button class="skill" data-level="emerging">Self-management</button>
+        </div>
+        <div class="skill-filter">
+          <span>Filter:</span>
+          <button class="btn tiny" data-filter="all">All</button>
+          <button class="btn tiny" data-filter="core">Core</button>
+          <button class="btn tiny" data-filter="emerging">Emerging</button>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Learning Now</h2>
+          <p>Active areas I am developing for future roles.</p>
+        </div>
+        <div class="info-cards">
+          <div class="info-card">
+            <span class="badge">AI</span>
+            <h3>Machine Learning Foundations</h3>
+            <p>Exploring models, datasets, and structured experimentation.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Web</span>
+            <h3>Front-end Craft</h3>
+            <p>Improving layout, visual structure, and interaction design.</p>
+          </div>
+          <div class="info-card">
+            <span class="badge">Focus</span>
+            <h3>Independent Practice</h3>
+            <p>Staying consistent with goals and self-guided improvement.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-title">
+          <h2>Soft Skills Snapshot</h2>
+          <p>How I show up under pressure.</p>
+        </div>
+        <div class="card">
+          <ul class="list">
+            <li>Friendly communication with customers.</li>
+            <li>Calm behavior in high-energy situations.</li>
+            <li>Consistent follow-through on tasks and commitments.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Built with focus and curiosity.</span>
+    </footer>
+
+    <button class="back-top" id="backTop" aria-label="Back to top">Top</button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
